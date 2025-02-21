@@ -2,11 +2,8 @@
 
 
 import readlineSync from 'readline-sync';
-import {hello} from '../src/cli.js';
+import {hello, getRandonInt} from '../src/cli.js';
 
-const getRandonInt = (max) => {
-    return Math.floor(Math.random() * max);
-}
 
 const calcGame = () => { 
     const userName = hello();

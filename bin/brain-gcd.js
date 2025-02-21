@@ -1,25 +1,28 @@
 #!/usr/bin/env node
 
-
 import readlineSync from 'readline-sync';
 import {hello, getRandonInt} from '../src/cli.js';
 
+const NOD = (x, y) => {
+	if (y > x){
+        return NOD(y, x);
+    } else if (!y) {
+        return x;
+    }
+	return NOD(y, x % y);
+}
 
-
-const isHonest = (int) => {
-    return int % 2 === 0 ? "yes" : "no";
-} 
-
-const gameIsChet = () => {
+const gameNOD = () => {
     const userName = hello();
-    console.log('Answer "yes" if the number is even, otherwise answer "no".')
+    console.log('Find the greatest common divisor of given numbers.')
     let count = 0;
     while (count != 3) {
-        const number = getRandonInt(100);
-        const correctAnswer = isHonest(number);
-        console.log(`Question: ${number}`)
+        const firstInt = getRandonInt(100);
+        const secondInt = getRandonInt(100);
+        const correctAnswer = NOD(firstInt, secondInt);
+        console.log(`Question: ${firstInt} ${secondInt}`);
         const userAnswer = readlineSync.question('Your answer: ');
-        if (userAnswer === correctAnswer) {
+        if (+userAnswer === correctAnswer) {
             count++;
             console.log("Correct!");
         } else {
@@ -32,4 +35,4 @@ const gameIsChet = () => {
     }
 }
 
-gameIsChet();
+gameNOD()

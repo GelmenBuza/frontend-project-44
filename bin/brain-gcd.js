@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
-import {hello, getRandonInt} from '../src/cli.js';
+
+import {hello, getRandonInt, congratulations, getAnswer} from '../src/cli.js';
+
+
 
 const NOD = (x, y) => {
 	if (y > x){
@@ -20,8 +22,7 @@ const gameNOD = () => {
         const firstInt = getRandonInt(100);
         const secondInt = getRandonInt(100);
         const correctAnswer = NOD(firstInt, secondInt);
-        console.log(`Question: ${firstInt} ${secondInt}`);
-        const userAnswer = readlineSync.question('Your answer: ');
+        const userAnswer = getAnswer(firstInt + ' ' + secondInt)
         if (+userAnswer === correctAnswer) {
             count++;
             console.log("Correct!");
@@ -30,9 +31,7 @@ const gameNOD = () => {
             break;
         }
     }
-    if (count === 3) {
-        console.log(`Congratulations, ${userName}!`)
-    }
+    congratulations(count, userName)
 }
 
 gameNOD()

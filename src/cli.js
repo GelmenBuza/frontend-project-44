@@ -10,3 +10,14 @@ export const hello = () => {
 export const getRandonInt = (max) => {
     return Math.floor(Math.random() * max);
 }
+
+export const congratulations = (count, userName) => {
+    if (count === 3) {
+        console.log(`Congratulations, ${userName}!`)
+    }
+}
+
+export const getAnswer = (example) => {
+    console.log(`Question: ${example}`);
+    return readlineSync.question('Your answer: ');
+}

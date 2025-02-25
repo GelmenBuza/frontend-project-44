@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 
-import readlineSync from 'readline-sync';
-import {hello, getRandonInt} from '../src/cli.js';
+import {hello, getRandonInt, congratulations, getAnswer} from '../src/cli.js';
 
 
 
@@ -17,8 +16,7 @@ const gameIsChet = () => {
     while (count != 3) {
         const number = getRandonInt(100);
         const correctAnswer = isHonest(number);
-        console.log(`Question: ${number}`)
-        const userAnswer = readlineSync.question('Your answer: ');
+        const userAnswer = getAnswer(number);
         if (userAnswer === correctAnswer) {
             count++;
             console.log("Correct!");
@@ -27,9 +25,7 @@ const gameIsChet = () => {
             break;
         }
     }
-    if (count === 3) {
-        console.log(`Congratulations, ${userName}!`)
-    }
+    congratulations(count, userName);
 }
 
 gameIsChet();

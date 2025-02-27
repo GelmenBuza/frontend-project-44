@@ -1,6 +1,8 @@
+#!/usr/bin/env node
+
 import {
   hello, getRandonInt, congratulations, getAnswer,
-} from '../src/cli';
+} from '../src/cli.js';
 
 const isHonest = (int) => (int % 2 === 0 ? 'yes' : 'no');
 

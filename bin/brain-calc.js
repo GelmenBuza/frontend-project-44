@@ -1,9 +1,8 @@
-import {hello} from '../src/cli.js'
-import {getRandonInt} from '../src/cli.js' 
+#!/usr/bin/env node
 
-import {congratulations} from '../src/cli.js'
-
-import {getAnswer} from '../src/cli.js';
+import {
+  hello, getRandonInt, congratulations, getAnswer,
+} from '../src/cli.js';
 
 const calcGame = () => {
   const userName = hello();

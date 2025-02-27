@@ -1,6 +1,8 @@
+#!/usr/bin/env node
+
 import {
   hello, getRandonInt, congratulations, getAnswer,
-} from '../src/cli';
+} from '../src/cli.js';
 
 const makeProgress = () => {
   const masProg = [];

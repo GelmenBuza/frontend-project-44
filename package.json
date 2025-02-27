@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/GelmenBuza/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/GelmenBuza/frontend-project-44/actions)",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  },
   "author": "",
   "license": "ISC",
   "type": "module",
@@ -19,7 +14,14 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
   "dependencies": {
+    "eslint-plugin-fp": "^2.3.0",
+    "link": "^2.1.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
@@ -28,10 +30,10 @@
     "@eslint/js": "^9.21.0",
     "eslint": "^8.57.1",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "globals": "^16.0.0"
+    "globals": "^16.0.0",
+    "prettier": "3.5.2"
   }
 }

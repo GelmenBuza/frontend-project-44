@@ -1,7 +1,8 @@
 import { hello, getAnswer, congratulations } from './cli.js';
 
-export default (Answers) => {
+export default (Answers, questions) => {
   const userName = hello();
+  console.log(questions);
   let count = 0;
   for (const [question, correctAnswer] of Answers) {
     const userAnswer = getAnswer(question);

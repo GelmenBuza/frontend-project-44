@@ -13,6 +13,7 @@ const isPrime = (int) => {
 };
 
 export default () => {
+  const question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const Answers = [];
   let count = 0;
   while (count !== 3) {
@@ -21,5 +22,5 @@ export default () => {
     Answers.push([answer, correctAnswer]);
     count += 1;
   }
-  return Answers;
+  return [Answers, question];
 };

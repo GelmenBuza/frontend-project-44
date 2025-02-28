@@ -10,6 +10,7 @@ const NOD = (x, y) => {
 };
 
 export default () => {
+  const question = 'Find the greatest common divisor of given numbers.';
   const Answers = [];
   let count = 0;
   while (count !== 3) {
@@ -19,5 +20,5 @@ export default () => {
     Answers.push([`${firstInt} ${secondInt}`, `${correctAnswer}`]);
     count += 1;
   }
-  return Answers;
+  return [Answers, question];
 };

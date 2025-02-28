@@ -2,6 +2,7 @@ import getRandonInt from '../helpers.js';
 
 export default () => {
   const Answers = [];
+  const question = 'What is the result of the expression?';
   let count = 0;
   while (count !== 3) {
     const firstInt = getRandonInt(50);
@@ -30,5 +31,5 @@ export default () => {
     count += 1;
   }
 
-  return Answers;
+  return [Answers, question];
 };

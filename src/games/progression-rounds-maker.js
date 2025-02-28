@@ -28,6 +28,7 @@ const makeProgress = () => {
 };
 
 export default () => {
+  const question = 'What number is missing in the progression?';
   const Answers = [];
   let count = 0;
   while (count !== 3) {
@@ -35,5 +36,5 @@ export default () => {
     count += 1;
   }
 
-  return Answers;
+  return [Answers, question];
 };

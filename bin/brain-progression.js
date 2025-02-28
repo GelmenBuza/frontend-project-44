@@ -4,8 +4,8 @@ import progRoundsMaker from '../src/games/progression-rounds-maker.js';
 import checkAnswers from '../src/index.js';
 
 const gameProg = () => {
-  const Answers = progRoundsMaker();
-  checkAnswers(Answers);
+  const [Answers, question] = progRoundsMaker();
+  checkAnswers(Answers, question);
 };
 
 gameProg();

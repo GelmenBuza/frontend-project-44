@@ -7,8 +7,6 @@ export const hello = () => {
   return name;
 };
 
-export const getRandonInt = (max) => Math.floor(Math.random() * max);
-
 export const congratulations = (count, userName) => {
   if (count === 3) {
     console.log(`Congratulations, ${userName}!`);

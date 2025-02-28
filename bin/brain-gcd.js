@@ -1,36 +1,11 @@
 #!/usr/bin/env node
 
-import {
-  hello, getRandonInt, congratulations, getAnswer,
-} from '../src/cli.js';
-
-const NOD = (x, y) => {
-  if (y > x) {
-    return NOD(y, x);
-  } if (!y) {
-    return x;
-  }
-  return NOD(y, x % y);
-};
+import NODRoundsMaker from '../src/games/gcd-rounds-maker.js';
+import checkAnswers from '../src/index.js';
 
 const gameNOD = () => {
-  const userName = hello();
-  console.log('Find the greatest common divisor of given numbers.');
-  let count = 0;
-  while (count !== 3) {
-    const firstInt = getRandonInt(100);
-    const secondInt = getRandonInt(100);
-    const correctAnswer = NOD(firstInt, secondInt);
-    const userAnswer = getAnswer(`${firstInt} ${secondInt}`);
-    if (+userAnswer === correctAnswer) {
-      count += 1;
-      console.log('Correct!');
-    } else {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`);
-      break;
-    }
-  }
-  congratulations(count, userName);
+  const Answers = NODRoundsMaker();
+  checkAnswers(Answers);
 };
 
 gameNOD();

@@ -4,7 +4,9 @@ export default (Answers, questions) => {
   const userName = hello();
   console.log(questions);
   let count = 0;
-  for (const [question, correctAnswer] of Answers) {
+  for (let i = 0; i < Answers.length; i += 1) {
+    const question = Answers[i][0];
+    const correctAnswer = Answers[i][1];
     const userAnswer = getAnswer(question);
     if (correctAnswer === userAnswer) {
       console.log('Correct!');

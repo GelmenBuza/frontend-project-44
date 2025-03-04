@@ -1,4 +1,4 @@
-import getRandonInt from '../helpers.js';
+import getRandonInt from '../getRandomInt.js';
 
 const makeProgress = () => {
   const masProg = [];
@@ -28,13 +28,13 @@ const makeProgress = () => {
 };
 
 export default () => {
-  const question = 'What number is missing in the progression?';
-  const Answers = [];
+  const description = 'What number is missing in the progression?';
+  const rounds = [];
   let count = 0;
   while (count !== 3) {
-    Answers.push(makeProgress());
+    rounds.push(makeProgress());
     count += 1;
   }
 
-  return [Answers, question];
+  return [rounds, description];
 };

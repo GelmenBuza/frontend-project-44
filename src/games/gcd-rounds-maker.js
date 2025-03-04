@@ -1,4 +1,4 @@
-import getRandonInt from '../helpers.js';
+import getRandonInt from '../getRandomInt.js';
 
 const NOD = (x, y) => {
   if (y > x) {
@@ -10,15 +10,15 @@ const NOD = (x, y) => {
 };
 
 export default () => {
-  const question = 'Find the greatest common divisor of given numbers.';
-  const Answers = [];
+  const description = 'Find the greatest common divisor of given numbers.';
+  const rounds = [];
   let count = 0;
   while (count !== 3) {
     const firstInt = getRandonInt(100);
     const secondInt = getRandonInt(100);
     const correctAnswer = NOD(firstInt, secondInt);
-    Answers.push([`${firstInt} ${secondInt}`, `${correctAnswer}`]);
+    rounds.push([`${firstInt} ${secondInt}`, `${correctAnswer}`]);
     count += 1;
   }
-  return [Answers, question];
+  return [rounds, description];
 };

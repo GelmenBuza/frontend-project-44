@@ -4,8 +4,8 @@ import evenRoundsMaker from '../src/games/even-rounds-maker.js';
 import checkAnswers from '../src/index.js';
 
 const gameEven = () => {
-  const [Answers, question] = evenRoundsMaker();
-  checkAnswers(Answers, question);
+  const [rounds, description] = evenRoundsMaker();
+  checkAnswers(rounds, description);
 };
 
 gameEven();

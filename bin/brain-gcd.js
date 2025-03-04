@@ -4,8 +4,8 @@ import NODRoundsMaker from '../src/games/gcd-rounds-maker.js';
 import checkAnswers from '../src/index.js';
 
 const gameNOD = () => {
-  const [Answers, question] = NODRoundsMaker();
-  checkAnswers(Answers, question);
+  const [rounds, description] = NODRoundsMaker();
+  checkAnswers(rounds, description);
 };
 
 gameNOD();

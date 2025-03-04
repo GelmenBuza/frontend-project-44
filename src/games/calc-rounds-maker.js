@@ -1,8 +1,8 @@
-import getRandonInt from '../helpers.js';
+import getRandonInt from '../getRandomInt.js';
 
 export default () => {
-  const Answers = [];
-  const question = 'What is the result of the expression?';
+  const rounds = [];
+  const description = 'What is the result of the expression?';
   let count = 0;
   while (count !== 3) {
     const firstInt = getRandonInt(50);
@@ -27,9 +27,9 @@ export default () => {
         break;
     }
 
-    Answers.push([`${firstInt} ${oprator} ${secondInt}`, `${correctAnswer}`]);
+    rounds.push([`${firstInt} ${oprator} ${secondInt}`, `${correctAnswer}`]);
     count += 1;
   }
 
-  return [Answers, question];
+  return [Answers, description];
 };

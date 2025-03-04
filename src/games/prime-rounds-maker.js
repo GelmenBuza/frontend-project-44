@@ -1,4 +1,4 @@
-import getRandonInt from '../helpers.js';
+import getRandonInt from '../getRandomInt.js';
 
 const isPrime = (int) => {
   if (int === 0 || int === 1) {
@@ -13,14 +13,14 @@ const isPrime = (int) => {
 };
 
 export default () => {
-  const question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const Answers = [];
+  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const rounds = [];
   let count = 0;
   while (count !== 3) {
     const answer = getRandonInt(100);
     const correctAnswer = isPrime(answer);
-    Answers.push([answer, correctAnswer]);
+    rounds.push([answer, correctAnswer]);
     count += 1;
   }
-  return [Answers, question];
+  return [rounds, description];
 };
